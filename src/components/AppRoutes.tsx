@@ -1,8 +1,8 @@
 import React from 'react';
-import LoginView from "./auth/LoginView";
+import SignUpView from "./auth/SignUpView";
 
 const AppRoutes =  ({ isUserLoggedIn:boolean = false }) => {
-    return <LoginView />
+    return <SignUpView />
 };
 
 export default AppRoutes;
