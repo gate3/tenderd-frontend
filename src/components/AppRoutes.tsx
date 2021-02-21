@@ -1,8 +1,7 @@
 import React from 'react';
-import AuthLayout from "./layouts/AuthLayout";
 
 const AppRoutes =  ({ isUserLoggedIn:boolean = false }) => {
-    return <AuthLayout/>
+    return null
 };
 
 export default AppRoutes;

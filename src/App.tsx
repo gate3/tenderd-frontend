@@ -12,7 +12,7 @@ import AppRoutes from "./components/AppRoutes";
 function App() {
   return (
       <Router>
-        <Layout>
+        <Layout style={{ height: '100vh' }}>
           <Switch>
 
           <AppRoutes />

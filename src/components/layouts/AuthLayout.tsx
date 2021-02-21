@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Layout, Button, Typography, Row, Col} from 'antd';
-const { Header } = Layout;
+const { Header, Content } = Layout;
 const { Title } = Typography;
 
 const style = {
@@ -12,6 +12,11 @@ const style = {
     },
     menuFloatRight: {
         float: 'right'
+    },
+    content: {
+        minHeight: 280,
+        padding: '0 50px',
+        background: '#fff',
     }
 };
 
@@ -29,20 +34,25 @@ const AuthActionArea = ({isLoginPage = false}) => {
   )
 };
 
-const AuthLayout = ({ isLoginPage = false }) => {
+const AuthLayout:React.FunctionComponent<{isLoginPage:boolean}> = ({ children, isLoginPage = false }) => {
     return (
-        <Header style={style.headerStyle}>
-            <Row align="middle">
-                <Col span={8}>
-                    <Title level={3}>Request Manager</Title>
-                </Col>
-                <Col span={8} offset={8}>
-
-                    <AuthActionArea isLoginPage={isLoginPage}/>
-
-                </Col>
-            </Row>
-        </Header>
+        <>
+            <Header style={style.headerStyle}>
+                <Row align="middle">
+                    <Col span={8}>
+                        <Title level={3}>Request Manager</Title>
+                    </Col>
+                    <Col span={8} offset={8}>
+                        <AuthActionArea isLoginPage={isLoginPage} />
+                    </Col>
+                </Row>
+            </Header>
+            <Content style={style.content}>
+                <Row justify="center" align="middle" style={{ width: '100%' }}>
+                    {children}
+                </Row>
+            </Content>
+        </>
     )
 };
 
