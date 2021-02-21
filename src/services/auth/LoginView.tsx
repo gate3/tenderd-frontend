@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthLayout from '../layouts/AuthLayout';
+import AuthLayout from '../../components/layouts/AuthLayout';
 import { Form, Input, Button, Typography, Row, Col} from 'antd';
 const { Title } = Typography;
 
