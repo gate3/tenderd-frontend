@@ -1,6 +1,6 @@
 import React from 'react';
 import AuthLayout from '../layouts/AuthLayout';
-import { Form, Input, Button, Typography, Row, Col} from 'antd';
+import { Form, Input, Button, Typography, Select} from 'antd';
 const { Title } = Typography;
 
 const style = {
@@ -13,14 +13,14 @@ const style = {
     }
 };
 
-const LoginView = () => (
+const SignUpView = () => (
     <AuthLayout isLoginPage>
-        <Title level={2} style={{ padding: 20 }}>Login</Title>
+        <Title level={2} style={{ padding: 20 }}>Create an Account</Title>
         <Form {...style.formLayout} name='basic' size='large' style={{ width: '30%' }}>
             <Form.Item
-                label="Username"
-                name="username"
-                rules={[{ required: true, message: 'Please input your username!' }]}>
+                label="Email"
+                name="email"
+                rules={[{ required: true, message: 'Please input your email!' }]}>
                 <Input />
             </Form.Item>
 
@@ -32,6 +32,20 @@ const LoginView = () => (
                 <Input.Password />
             </Form.Item>
 
+            <Form.Item
+                label="Full Name"
+                name="fullname"
+                rules={[{ required: true, message: 'Please input your full name!' }]}>
+                <Input />
+            </Form.Item>
+
+            <Form.Item
+                label="Email"
+                name="email"
+                rules={[{ required: true, message: 'Please select a company!' }]}>
+                <Select />
+            </Form.Item>
+
             <Form.Item {...style.tailLayout} >
                 <Button type="primary" htmlType="submit" size='large' style={{ width: '100%' }}>
                     Login
@@ -41,4 +55,4 @@ const LoginView = () => (
     </AuthLayout>
 );
 
-export default LoginView;
+export default SignUpView;
