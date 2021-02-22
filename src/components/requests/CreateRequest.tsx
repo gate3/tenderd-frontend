@@ -11,7 +11,7 @@ import {
 } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 
-import InAppLayout from "../../components/layouts/InAppLayout";
+import InAppLayout from "../layouts/InAppLayout";
 const {Option} = Select;
 const { Title } = Typography;
 
