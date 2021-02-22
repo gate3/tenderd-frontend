@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Typography, Menu} from 'antd';
+import { Layout, Typography, Menu, Row, Col } from 'antd';
 import { UserOutlined, CopyOutlined, HomeOutlined, SettingFilled } from '@ant-design/icons';
 import {CssStylesheet} from "../../types";
 const { Header, Content, Footer } = Layout;
@@ -39,7 +39,11 @@ const InAppLayout:React.FunctionComponent = ({ children }) => (
         </Header>
         <Layout>
             <Content style={style.contentStyle}>
-                {children}
+                <Row>
+                    <Col span={20} offset={2}>
+                        {children}
+                    </Col>
+                </Row>
             </Content>
             <Footer style={{ textAlign: 'center' }}>Requests Management App by Acme Inc.</Footer>
         </Layout>

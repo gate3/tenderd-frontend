@@ -1,8 +1,7 @@
 import React from 'react';
-import InAppLayout from "./layouts/InAppLayout.jsx";
 
 const AppRoutes =  ({ isUserLoggedIn:boolean = false }) => {
-    return <InAppLayout />
+    return null
 };
 
 export default AppRoutes;
