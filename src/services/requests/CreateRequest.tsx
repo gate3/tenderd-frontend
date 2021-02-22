@@ -15,7 +15,6 @@ import InAppLayout from "../../components/layouts/InAppLayout";
 const {Option} = Select;
 const { Title } = Typography;
 
-
 const formItemLayout = {
     labelCol: {
         xs: { span: 24 },
@@ -26,6 +25,7 @@ const formItemLayout = {
         sm: { span: 8 },
     },
 };
+
 const tailFormItemLayout = {
     wrapperCol: {
         xs: {
