@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import { Layout, Button, Typography, Row, Col} from 'antd';
 const { Header, Content } = Layout;
@@ -25,12 +26,14 @@ const AuthActionArea = ({isLoginPage = false}) => {
   const settings:{title?:string, buttonText?:string, buttonLink?:string} = {};
   settings.title = isLoginPage ? 'Don\'t have an account ?' : 'Already have an account ?';
   settings.buttonText = isLoginPage ? 'Create Account' : 'Login';
-  settings.buttonLink = isLoginPage ? '/register' : '/login';
+  settings.buttonLink = isLoginPage ? '/register' : '/';
 
   return (
       <Row justify="end" align="middle">
           {settings.title} &nbsp;
-          <Button shape="round">{settings.buttonText}</Button>
+          <Link to={settings.buttonLink}>
+              <Button shape="round">{settings.buttonText}</Button>
+          </Link>
       </Row>
   )
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import InAppLayout from "../../components/layouts/InAppLayout";
+import InAppLayout from "../layouts/InAppLayout";
 import {Button, Form, Input, Row, Select, Typography} from "antd";
 import { LogoutOutlined } from '@ant-design/icons';
 
