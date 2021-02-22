@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { Table, Button } from 'antd';
-import InAppLayout from "../../components/layouts/InAppLayout.jsx";
+import {AppstoreAddOutlined} from '@ant-design/icons';
+import InAppLayout from "../../components/layouts/InAppLayout";
 
 
 const columns = [
@@ -61,6 +62,7 @@ const data = [
 const RequestsView = () => {
     return (
         <InAppLayout>
+            <Button icon={<AppstoreAddOutlined />} style={{ marginBottom: 10 }}> Add New Request </Button>
             <Table columns={columns} dataSource={data} />
         </InAppLayout>
     )
